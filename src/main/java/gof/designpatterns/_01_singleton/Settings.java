@@ -1,5 +1,5 @@
 
-package gof.designpatterns.singleton;
+package gof.designpatterns._01_singleton;
 
 // 단점이 존재하다
 // 1. 미리 만들어진다.

@@ -1,5 +1,5 @@
 
-package gof.designpatterns.singleton;
+package gof.designpatterns._01_singleton;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;

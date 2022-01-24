@@ -1,4 +1,4 @@
-package gof.designpatterns.singleton;
+package gof.designpatterns._01_singleton;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
