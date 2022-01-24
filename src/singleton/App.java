@@ -8,7 +8,7 @@ public class App {
 
         // * 싱글톤 패턴 구현 방법을 깨트리는 방법
         // 1. 리플렉션 사용하기
-        Settings settings = Settings.getInstance();
+        Settings settings = Settings.INSTANCE;
 
         Constructor<Settings> constructor = Settings.class.getDeclaredConstructor();
         constructor.setAccessible(true);
