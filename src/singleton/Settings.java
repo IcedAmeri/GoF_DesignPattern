@@ -1,6 +1,8 @@
 package singleton;
 
-public class Settings {
+import java.io.Serializable;
+
+public class Settings implements Serializable {
 
     /**
      * 1. synchronized
@@ -59,5 +61,10 @@ public class Settings {
 
     public static Settings getInstance() {
         return SettingsHolder.INSTANCE;
+    }
+
+    // 역직렬화 방지
+    protected Object readResolve() {
+        return getInstance();
     }
 }
