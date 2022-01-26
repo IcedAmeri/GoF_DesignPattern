@@ -5,6 +5,8 @@ import gof.designpatterns._04_builder._01_before.TourPlan;
 import java.time.LocalDate;
 
 public interface TourPlanBuilder {
+//    TourPlanBuilder newInstance();
+
     TourPlanBuilder nightsAndDays(int nights, int days);
 
     TourPlanBuilder title(String title);

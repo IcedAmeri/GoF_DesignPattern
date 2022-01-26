@@ -21,8 +21,15 @@ public class DefaultTourBuilder implements TourPlanBuilder {
 
     private List<DetailPlan> plans;
 
+//    private TourPlan tourPlan;
+//    public TourPlanBuilder newInstance() {
+//        this.tourPlan = new TourPlan();
+//        return this;
+//    }
+
     @Override
     public TourPlanBuilder nightsAndDays(int nights, int days) {
+//        this.tourPlan.setNights(nights);
         this.nights = nights;
         this.days = days;
         return this;
