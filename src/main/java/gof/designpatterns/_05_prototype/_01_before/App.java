@@ -1,7 +1,7 @@
 package gof.designpatterns._05_prototype._01_before;
 
 public class App {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws CloneNotSupportedException {
         GithubRepository repository = new GithubRepository();
         repository.setUser("whiteShip");
         repository.setName("live-study");
@@ -15,5 +15,16 @@ public class App {
 
         // TODO clone != githubIssue
         // TODO clone.equals(githubIssue) => true
+        GithubIssue clone = (GithubIssue) githubIssue.clone();
+        System.out.println(clone.getUrl());
+
+        repository.setUser("Keesun");
+
+        System.out.println(clone != githubIssue);
+        System.out.println(clone.equals(githubIssue));
+        System.out.println(clone.getClass() == githubIssue.getClass());
+        System.out.println(clone.getRepository() == githubIssue.getRepository());
+
+        System.out.println(clone.getUrl());
     }
 }
