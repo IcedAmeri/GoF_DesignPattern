@@ -1,7 +1,6 @@
-package gof.designpatterns._02_structural_patterns._03_composite._01_before;
+package gof.designpatterns._02_structural_patterns._03_composite._02_after;
 
 public class Client {
-
     public static void main(String[] args) {
         Item doranBlade = new Item("도란검", 450);
         Item healPotion = new Item("체력 물약", 50);
@@ -15,13 +14,7 @@ public class Client {
         client.printPrice(bag);
     }
 
-    private void printPrice(Item item) {
-        System.out.println(item.getPrice());
+    private void printPrice(Component component) {
+        System.out.println(component.getPrice());
     }
-
-    private void printPrice(Bag bag) {
-        int sum = bag.getItems().stream().mapToInt(Item::getPrice).sum();
-        System.out.println(sum);
-    }
-
 }
