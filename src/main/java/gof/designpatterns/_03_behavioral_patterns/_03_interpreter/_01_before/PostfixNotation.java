@@ -20,13 +20,16 @@ public class PostfixNotation {
 
         for (char c : this.expression.toCharArray()) {
             switch (c) {
-                case '+' -> numbers.push(numbers.pop() + numbers.pop());
-                case '-' -> {
+                case '+':
+                    numbers.push(numbers.pop() + numbers.pop());
+                    break;
+                case '-':
                     int right = numbers.pop();
                     int left = numbers.pop();
                     numbers.push(left - right);
-                }
-                default -> numbers.push(Integer.parseInt(c + ""));
+                    break;
+                default:
+                    numbers.push(Integer.parseInt(c + ""));
             }
         }
 
